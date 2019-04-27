@@ -8,7 +8,7 @@ class BuyOrders extends React.Component {
 
   render () {
     const { buyOrders, updateDisplay } = this.props
-    const buyOrderIds = Object.keys(buyOrders);
+    const buyOrderIds = Object.keys(buyOrders).reverse();
 
     return (
       <section className='buy-orders'>
