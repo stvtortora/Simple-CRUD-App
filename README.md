@@ -1,24 +1,18 @@
 # README
+I wasn't sure if you had ruby and rails installed on your machine, so I published my app at https://narrative-crud-app.herokuapp.com/ so you don't need to install everything.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+If you'd like to run it locally, begin by installing ruby, rails, and postgres (if you don't already have them):
+brew install rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+rbenv install 2.5.1
+gem install rails
+Visit Postgres.app to get postgres.
 
-Things you may want to cover:
+Next, run the following commands in the root of this project to setup rails:
+bundle install
+bundle exec rails db:create
+bundle exec rails db:migrate
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Finally, start the server:
+rails s
+visit http://localhost:3000/
