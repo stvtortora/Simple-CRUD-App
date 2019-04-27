@@ -26,6 +26,14 @@ export const deleteBuyOrder = id => {
   }
 }
 
+export const fetchBuyOrder = id => {
+  return dispatch => {
+    return APIUtil.fetchBuyOrder(id).then(buyOrder => {
+      return dispatch({type: RECEIVE_BUY_ORDER, buyOrder})
+    })
+  }
+}
+
 export const fetchBuyOrders = () => {
   return dispatch => {
     return APIUtil.fetchBuyOrders().then(buyOrders => {

@@ -20,6 +20,16 @@ class Api::BuyOrdersController < ApplicationController
     render '/api/buy_orders/index'
   end
 
+  def show
+    @buy_order = BuyOrder.find(params[:id])
+
+    if @buy_order
+      render '/api/buy_orders/show'
+    else
+      render json: ['Order not found'], status: 404
+    end
+  end
+
   def update
     @buy_order = BuyOrder.find(params[:id])
 

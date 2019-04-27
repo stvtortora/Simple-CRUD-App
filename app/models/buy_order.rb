@@ -14,7 +14,7 @@ class BuyOrder < ApplicationRecord
   private
 
   def valid_max_bid_price?
-    if max_bid_price != max_bid_price.round(2)
+    if max_bid_price.to_f != max_bid_price.to_f.round(2)
       errors.add(:max_bid_price, "should have at most two digits after the decimal.")
     end
   end

@@ -10,6 +10,12 @@ class BuyOrderForm extends React.Component {
     this.state = this.props.buy_order
   }
 
+  componentDidUpdate (prevProps) {
+    if (this.props.buy_order !== prevProps.buy_order) {
+      this.setState(this.props.buy_order)
+    }
+  }
+
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value})
@@ -31,7 +37,7 @@ class BuyOrderForm extends React.Component {
 
   renderErrors () {
     return this.props.errors.map(error => {
-      return <li className='error-message'>{error}</li>
+      return <li className='error-message' key={error}>{error}</li>
     })
   }
 

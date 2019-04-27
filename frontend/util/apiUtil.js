@@ -13,6 +13,13 @@ export const deleteBuyOrder = id => {
   })
 }
 
+export const fetchBuyOrder = id => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/buy_orders/${id}`
+  })
+}
+
 export const fetchBuyOrders = () => {
   return $.ajax({
     method: 'GET',
