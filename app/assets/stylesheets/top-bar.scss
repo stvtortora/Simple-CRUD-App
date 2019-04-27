@@ -1,0 +1,19 @@
+.top-bar {
+  display: flex;
+  margin: 40px 60px 12px;
+
+  .navigation {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 6px 0 0 17px;
+
+    li {
+      margin: 0 17px 0 0;
+      &:hover {
+        color: #0032e6;
+        cursor: pointer;
+      }
+    }
+  }
+}

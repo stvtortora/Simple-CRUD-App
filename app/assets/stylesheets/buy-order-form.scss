@@ -1,0 +1,80 @@
+.buy-order-form-wrapper {
+  margin: 0 40px 0 40px;
+  display: flex;
+  flex-direction: column;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    fieldset {
+      border-radius: 5px;
+      border-right: none;
+      border-left: none;
+      border-bottom: none;
+
+      legend {
+        border-top: 1px solid;
+      	border-left: 1px solid;
+      	border-right: 1px solid;
+      	border-radius: 5px 5px 0px 0px;
+      	padding: 0px 8px 3px 8px;
+      	box-shadow:-0px -1px 2px #F1F1F1;
+      	font-weight: normal;
+      	font-size: 18px;
+      }
+
+      .error-message {
+        text-align: center;
+        list-style: none;
+        color: red;
+        font-size: 13px;
+      }
+
+      .fields {
+        margin: 40px 60px;
+
+        label {
+          display: block;
+          margin-bottom: 20px;
+
+          span {
+            display: flex;
+            float: left;
+            width: 400px;
+            font-weight: bold;
+            font-size: 17px;
+            text-shadow: 1px 1px 1px #fff;
+            white-space: nowrap;
+            .required-field {
+              color: red;
+            }
+          }
+          select {
+            font-size: 17px;
+          }
+          input {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+    .submit {
+      display: block;
+      margin: auto;
+      background-color: #0032e6;
+      color: white;
+      padding: 0 20px 0 20px;
+      border-radius: 20px;
+      height: 35px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+
+      &:hover {
+        background-color: #3872f5;
+        cursor: pointer;
+      }
+    }
+  }
+}
