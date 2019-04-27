@@ -23,15 +23,16 @@ class BuyOrderForm extends React.Component {
   }
 
   handleSubmit(e) {
+    const savedState = this.state
     const { clearErrors, action, history, errors } = this.props;
     e.preventDefault()
+    clearErrors();
 
-    action(this.state).then(() => {
-      clearErrors();
-
-      if (!errors.length) {
-        history.push('/manageOrders')
-      }
+    action(this.state).then(response => {
+      history.push('/manageOrders')
+    },
+    () => {
+      this.setState(savedState)
     })
   }
 
@@ -42,6 +43,7 @@ class BuyOrderForm extends React.Component {
   }
 
   render () {
+
     return (
       <div className='buy-order-form-wrapper'>
         <form onSubmit={this.handleSubmit}>

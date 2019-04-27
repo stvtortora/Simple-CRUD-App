@@ -1,5 +1,7 @@
-import React from 'react';
-import { withRouter } from 'react-router';
+import React from 'react'
+import { withRouter } from 'react-router'
+import { connect } from 'react-redux'
+import { clearErrors } from '../../actions/actions'
 
 class Navigation extends React.Component {
   constructor (props) {
@@ -8,6 +10,7 @@ class Navigation extends React.Component {
   }
 
   navigateTo (path) {
+    this.props.clearErrors();
     this.props.history.push(path)
   }
 
@@ -21,4 +24,10 @@ class Navigation extends React.Component {
   }
 }
 
-export default withRouter(Navigation);
+const mapDispatchToProps = dispatch => {
+  return {
+    clearErrors: () => dispatch(clearErrors())
+  }
+}
+
+export default withRouter(connect(null, mapDispatchToProps)(Navigation));
