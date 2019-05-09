@@ -1,5 +1,14 @@
 # README
-Published at https://narrative-crud-app.herokuapp.com/ so you don't need to install everything.
+
+## About
+
+This is a simple CRUD app written with React and Ruby on rails.
+
+## Features
+
+Full CRUD functionality for buy orders, which include a name, package type, and and max bid pice.
+
+## Setup
 
 If you'd like to run it locally, begin by installing ruby, rails, and postgres (if you don't already have them):
 ```

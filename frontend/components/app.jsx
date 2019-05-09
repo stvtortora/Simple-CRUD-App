@@ -4,7 +4,7 @@ import TopBar from './topBar/topBar';
 import PlaceBuyOrderForm from './buyOrderForm/placeBuyOrderContainer';
 import EditBuyOrderForm from './buyOrderForm/editBuyOrderContainer';
 import BuyOrders from './manage/manage';
-import NarrativeLogo from './narrativeLogo';
+import Logo from './logo';
 
 const App = () => (
   <content>
@@ -14,7 +14,7 @@ const App = () => (
       <Route path='/manageOrders' exact component={BuyOrders} />
       <Route path='/manageOrders/:id' exact component={EditBuyOrderForm} />
     </div>
-    <footer><NarrativeLogo/></footer>
+    <footer><Logo/></footer>
   </content>
 )
 
